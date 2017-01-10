@@ -1,0 +1,87 @@
+.personal {
+  display: table-cell;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0px 2px 20px 0px rgba(46, 61, 73, 0.5);
+  background: url(/assets/back.jpg) 0 0 no-repeat;
+  background-size: cover;
+  
+  &--video {
+    height: 100%;
+    display: none
+  }
+  &--overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &.overlay--description {
+      padding-top: 0.8125rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem
+    }
+    &.overlay--title {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 1.5rem
+    }
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .personal {
+    display: table-cell;
+    width: 50%;
+    position: relative;
+    &--video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 6000;
+      display: block
+    }
+    &--overlay {
+        background-color: green;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 50px 0 60px;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      height: 45rem;
+      z-index: 7000;
+      width: 100%;
+      &.overlay--title {
+        margin-top: 0;
+        margin-bottom: 2.25rem
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .personal--overlay {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding: 30px;
+    &.overlay--description {
+      margin-bottom: 2.25rem
+    }
+    &.overlay--title {
+      margin-bottom: 0.75rem
+    }
+  }
+}
+
+@media screen and (min-width: 62rem) and (min-width: 48rem) {
+  .personal--overlay {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    &.overlay--title {
+      margin-bottom: 3.75rem
+    }
+  }
+}

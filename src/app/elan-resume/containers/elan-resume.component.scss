@@ -1,0 +1,117 @@
+  .resume {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    backface-visibility: hidden;
+    &::after {
+      clear: both;
+      content: "";
+      display: table
+    }
+    &.header {
+      height: 4.5rem;
+      display: table-header-group
+    }
+    &.cover {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 100%;
+      display: table-row;
+      background-color: darkslategray;
+      &::after {
+        clear: both;
+        content: "";
+        display: table
+      }
+      &.outer_contain {
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle
+      }
+      &.contain {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem
+      }
+    }
+  }
+  
+  @media screen and (min-width: 48rem) {
+    .resume {
+      &.cover {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        width: 100%;
+        &.contain {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+  
+  .contain {
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+.white {
+  color: #fff !important;
+}
+
+@media screen and (min-width: 48rem) {
+  h6,
+  .h6 {
+    font-size: 0.8125rem;
+    line-height: 1.5rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #7d97ad;
+}
+
+@media screen and (min-width: 48rem) {
+  h1--headline,
+  .h1--headline {
+    font-size: 3rem;
+    line-height: 3.75rem;
+  }
+}
+
+h1 {
+  font-family: RobotoThin;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 300;
+}
+
+h3,
+.h3 {
+  font-family: RobotoThin;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 300;
+}
+
+em {
+  font-style: italic !important;
+}
